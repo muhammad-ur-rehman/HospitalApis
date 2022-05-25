@@ -1,0 +1,695 @@
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (23.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "hospitals"[0m
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE TABLE "hospitals" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.8ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20220425094548)[0m
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "test"], ["created_at", "2022-04-26 07:26:41.329677"], ["updated_at", "2022-04-26 07:26:41.329677"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "schema_sha1"], ["value", "cb7fd92fafdf15f54c72f85787958a9d479c7d91"], ["created_at", "2022-04-26 07:26:41.334482"], ["updated_at", "2022-04-26 07:26:41.334482"]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (16.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mHospital Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "hospitals" WHERE LOWER("hospitals"."name") = LOWER(?) LIMIT ?[0m  [["name", ""], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (6.6ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mHospital Exists? (2.3ms)[0m  [1m[34mSELECT 1 AS one FROM "hospitals" WHERE LOWER("hospitals"."name") = LOWER(?) LIMIT ?[0m  [["name", "this is bot hosital"], ["LIMIT", 1]]
+  [1m[36mHospital Create (2.0ms)[0m  [1m[32mINSERT INTO "hospitals" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "this is bot hosital"], ["created_at", "2022-04-26 10:08:17.090588"], ["updated_at", "2022-04-26 10:08:17.090588"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mHospital Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "hospitals" WHERE LOWER("hospitals"."name") = LOWER(?) AND "hospitals"."id" != ? LIMIT ?[0m  [["name", "this is bot hosital"], ["id", 1], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (14.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mHospital Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "hospitals" WHERE LOWER("hospitals"."name") = LOWER(?) LIMIT ?[0m  [["name", "this is bot hosital"], ["LIMIT", 1]]
+  [1m[36mHospital Create (0.4ms)[0m  [1m[32mINSERT INTO "hospitals" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "this is bot hosital"], ["created_at", "2022-04-26 10:08:49.249013"], ["updated_at", "2022-04-26 10:08:49.249013"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mHospital Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "hospitals" WHERE LOWER("hospitals"."name") = LOWER(?) AND "hospitals"."id" != ? LIMIT ?[0m  [["name", "this is bot hosital"], ["id", 1], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (2.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (14.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mHospital Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "hospitals" WHERE LOWER("hospitals"."name") = LOWER(?) LIMIT ?[0m  [["name", "this is bot hospital- 1"], ["LIMIT", 1]]
+  [1m[36mHospital Create (0.5ms)[0m  [1m[32mINSERT INTO "hospitals" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "this is bot hospital- 1"], ["created_at", "2022-04-26 10:21:05.729650"], ["updated_at", "2022-04-26 10:21:05.729650"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mHospital Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "hospitals" WHERE LOWER("hospitals"."name") = LOWER(?) AND "hospitals"."id" != ? LIMIT ?[0m  [["name", "this is bot hospital- 1"], ["id", 1], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (15.8ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mHospital Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "hospitals" WHERE LOWER("hospitals"."name") = LOWER(?) LIMIT ?[0m  [["name", "this is bot hospital- 1"], ["LIMIT", 1]]
+  [1m[36mHospital Create (0.4ms)[0m  [1m[32mINSERT INTO "hospitals" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "this is bot hospital- 1"], ["created_at", "2022-04-26 10:21:11.471225"], ["updated_at", "2022-04-26 10:21:11.471225"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mHospital Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "hospitals" WHERE LOWER("hospitals"."name") = LOWER(?) AND "hospitals"."id" != ? LIMIT ?[0m  [["name", "this is bot hospital- 1"], ["id", 1], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (2.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mHospital Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "hospitals" WHERE LOWER("hospitals"."name") = LOWER(?) LIMIT ?[0m  [["name", ""], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mHospital Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "hospitals" WHERE LOWER("hospitals"."name") = LOWER(?) LIMIT ?[0m  [["name", ""], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mHospital Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "hospitals" WHERE LOWER("hospitals"."name") = LOWER(?) LIMIT ?[0m  [["name", "this is bot hospital- 1"], ["LIMIT", 1]]
+  [1m[36mHospital Create (2.5ms)[0m  [1m[32mINSERT INTO "hospitals" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "this is bot hospital- 1"], ["created_at", "2022-04-26 10:25:52.099411"], ["updated_at", "2022-04-26 10:25:52.099411"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mHospital Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "hospitals" WHERE LOWER("hospitals"."name") = LOWER(?) AND "hospitals"."id" != ? LIMIT ?[0m  [["name", "this is bot hospital- 1"], ["id", 1], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mHospital Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "hospitals" WHERE LOWER("hospitals"."name") = LOWER(?) LIMIT ?[0m  [["name", ""], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mHospital Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "hospitals" WHERE LOWER("hospitals"."name") = LOWER(?) LIMIT ?[0m  [["name", ""], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mHospital Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "hospitals" WHERE LOWER("hospitals"."name") = LOWER(?) LIMIT ?[0m  [["name", "this is bot hospital- 1"], ["LIMIT", 1]]
+  [1m[36mHospital Create (0.4ms)[0m  [1m[32mINSERT INTO "hospitals" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "this is bot hospital- 1"], ["created_at", "2022-04-26 10:28:09.893707"], ["updated_at", "2022-04-26 10:28:09.893707"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mHospital Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "hospitals" WHERE LOWER("hospitals"."name") = LOWER(?) AND "hospitals"."id" != ? LIMIT ?[0m  [["name", "this is bot hospital- 1"], ["id", 1], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (2.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mHospital Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "hospitals" WHERE LOWER("hospitals"."name") = LOWER(?) LIMIT ?[0m  [["name", ""], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mHospital Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "hospitals" WHERE LOWER("hospitals"."name") = LOWER(?) LIMIT ?[0m  [["name", "this is bot hospital- 1"], ["LIMIT", 1]]
+  [1m[36mHospital Create (0.4ms)[0m  [1m[32mINSERT INTO "hospitals" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "this is bot hospital- 1"], ["created_at", "2022-04-26 10:28:44.489168"], ["updated_at", "2022-04-26 10:28:44.489168"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mHospital Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "hospitals" WHERE LOWER("hospitals"."name") = LOWER(?) AND "hospitals"."id" != ? LIMIT ?[0m  [["name", "this is bot hospital- 1"], ["id", 1], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (2.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mHospital Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "hospitals" WHERE LOWER("hospitals"."name") = LOWER(?) LIMIT ?[0m  [["name", "this is bot hospital- 1"], ["LIMIT", 1]]
+  [1m[36mHospital Create (0.4ms)[0m  [1m[32mINSERT INTO "hospitals" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "this is bot hospital- 1"], ["created_at", "2022-04-26 10:29:09.346783"], ["updated_at", "2022-04-26 10:29:09.346783"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mHospital Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "hospitals" WHERE LOWER("hospitals"."name") = LOWER(?) AND "hospitals"."id" != ? LIMIT ?[0m  [["name", "this is bot hospital- 1"], ["id", 1], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (2.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mHospital Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "hospitals" WHERE LOWER("hospitals"."name") = LOWER(?) LIMIT ?[0m  [["name", "this is bot hospital- 1"], ["LIMIT", 1]]
+  [1m[36mHospital Create (0.4ms)[0m  [1m[32mINSERT INTO "hospitals" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "this is bot hospital- 1"], ["created_at", "2022-04-26 10:29:31.042546"], ["updated_at", "2022-04-26 10:29:31.042546"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mHospital Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "hospitals" WHERE LOWER("hospitals"."name") = LOWER(?) AND "hospitals"."id" != ? LIMIT ?[0m  [["name", "this is bot hospital- 1"], ["id", 1], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (2.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mHospital Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "hospitals" WHERE LOWER("hospitals"."name") = LOWER(?) LIMIT ?[0m  [["name", "this is bot hospital- 2"], ["LIMIT", 1]]
+  [1m[36mHospital Create (0.6ms)[0m  [1m[32mINSERT INTO "hospitals" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "this is bot hospital- 2"], ["created_at", "2022-04-26 10:29:31.059676"], ["updated_at", "2022-04-26 10:29:31.059676"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mHospital Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "hospitals" WHERE LOWER("hospitals"."name") = LOWER(?) AND "hospitals"."id" != ? LIMIT ?[0m  [["name", "this is bot hospital- 2"], ["id", 1], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mHospital Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "hospitals" WHERE LOWER("hospitals"."name") = LOWER(?) LIMIT ?[0m  [["name", "this is bot hospital- 1"], ["LIMIT", 1]]
+  [1m[36mHospital Create (0.4ms)[0m  [1m[32mINSERT INTO "hospitals" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "this is bot hospital- 1"], ["created_at", "2022-04-26 10:29:45.159818"], ["updated_at", "2022-04-26 10:29:45.159818"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mHospital Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "hospitals" WHERE LOWER("hospitals"."name") = LOWER(?) AND "hospitals"."id" != ? LIMIT ?[0m  [["name", "this is bot hospital- 1"], ["id", 1], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (2.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mHospital Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "hospitals" WHERE LOWER("hospitals"."name") = LOWER(?) LIMIT ?[0m  [["name", "this is bot hospital- 2"], ["LIMIT", 1]]
+  [1m[36mHospital Create (0.3ms)[0m  [1m[32mINSERT INTO "hospitals" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "this is bot hospital- 2"], ["created_at", "2022-04-26 10:29:45.176225"], ["updated_at", "2022-04-26 10:29:45.176225"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mHospital Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "hospitals" WHERE LOWER("hospitals"."name") = LOWER(?) AND "hospitals"."id" != ? LIMIT ?[0m  [["name", "this is bot hospital- 2"], ["id", 1], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mHospital Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "hospitals" WHERE LOWER("hospitals"."name") = LOWER(?) LIMIT ?[0m  [["name", "this is bot hospital- 1"], ["LIMIT", 1]]
+  [1m[36mHospital Create (0.4ms)[0m  [1m[32mINSERT INTO "hospitals" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "this is bot hospital- 1"], ["created_at", "2022-04-26 10:31:09.651147"], ["updated_at", "2022-04-26 10:31:09.651147"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mHospital Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "hospitals" WHERE LOWER("hospitals"."name") = LOWER(?) AND "hospitals"."id" != ? LIMIT ?[0m  [["name", "this is bot hospital- 1"], ["id", 1], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (2.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mHospital Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "hospitals" WHERE LOWER("hospitals"."name") = LOWER(?) LIMIT ?[0m  [["name", "this is bot hospital- 1"], ["LIMIT", 1]]
+  [1m[36mHospital Create (0.4ms)[0m  [1m[32mINSERT INTO "hospitals" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "this is bot hospital- 1"], ["created_at", "2022-04-26 10:31:34.852487"], ["updated_at", "2022-04-26 10:31:34.852487"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mHospital Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "hospitals" WHERE LOWER("hospitals"."name") = LOWER(?) AND "hospitals"."id" != ? LIMIT ?[0m  [["name", "this is bot hospital- 1"], ["id", 1], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mHospital Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "hospitals" WHERE LOWER("hospitals"."name") = LOWER(?) LIMIT ?[0m  [["name", "this is bot hospital- 2"], ["LIMIT", 1]]
+  [1m[36mHospital Create (0.3ms)[0m  [1m[32mINSERT INTO "hospitals" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "this is bot hospital- 2"], ["created_at", "2022-04-26 10:31:34.868846"], ["updated_at", "2022-04-26 10:31:34.868846"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mHospital Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "hospitals" WHERE LOWER("hospitals"."name") = LOWER(?) AND "hospitals"."id" != ? LIMIT ?[0m  [["name", ""], ["id", 1], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mHospital Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "hospitals" WHERE LOWER("hospitals"."name") = LOWER(?) LIMIT ?[0m  [["name", "this is bot hospital- 1"], ["LIMIT", 1]]
+  [1m[36mHospital Create (0.4ms)[0m  [1m[32mINSERT INTO "hospitals" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "this is bot hospital- 1"], ["created_at", "2022-04-26 10:32:49.068970"], ["updated_at", "2022-04-26 10:32:49.068970"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mHospital Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "hospitals" WHERE LOWER("hospitals"."name") = LOWER(?) AND "hospitals"."id" != ? LIMIT ?[0m  [["name", "this is bot hospital- 1"], ["id", 1], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (1.9ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mHospital Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "hospitals" WHERE LOWER("hospitals"."name") = LOWER(?) LIMIT ?[0m  [["name", "this is bot hospital- 2"], ["LIMIT", 1]]
+  [1m[36mHospital Create (0.3ms)[0m  [1m[32mINSERT INTO "hospitals" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "this is bot hospital- 2"], ["created_at", "2022-04-26 10:32:49.085641"], ["updated_at", "2022-04-26 10:32:49.085641"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mHospital Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "hospitals" WHERE LOWER("hospitals"."name") = LOWER(?) AND "hospitals"."id" != ? LIMIT ?[0m  [["name", ""], ["id", 1], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mHospital Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "hospitals" WHERE LOWER("hospitals"."name") = LOWER(?) LIMIT ?[0m  [["name", "this is bot hospital- 3"], ["LIMIT", 1]]
+  [1m[36mHospital Create (0.2ms)[0m  [1m[32mINSERT INTO "hospitals" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "this is bot hospital- 3"], ["created_at", "2022-04-26 10:32:49.090579"], ["updated_at", "2022-04-26 10:32:49.090579"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mHospital Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "hospitals" WHERE LOWER("hospitals"."name") = LOWER(?) AND "hospitals"."id" != ? LIMIT ?[0m  [["name", "1212111"], ["id", 1], ["LIMIT", 1]]
+  [1m[36mHospital Update (0.8ms)[0m  [1m[33mUPDATE "hospitals" SET "name" = ?, "updated_at" = ? WHERE "hospitals"."id" = ?[0m  [["name", "1212111"], ["updated_at", "2022-04-26 10:32:49.092095"], ["id", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mHospital Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "hospitals" WHERE LOWER("hospitals"."name") = LOWER(?) LIMIT ?[0m  [["name", "this is bot hospital- 1"], ["LIMIT", 1]]
+  [1m[36mHospital Create (0.4ms)[0m  [1m[32mINSERT INTO "hospitals" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "this is bot hospital- 1"], ["created_at", "2022-04-26 10:35:10.388635"], ["updated_at", "2022-04-26 10:35:10.388635"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mHospital Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "hospitals" WHERE LOWER("hospitals"."name") = LOWER(?) AND "hospitals"."id" != ? LIMIT ?[0m  [["name", "this is bot hospital- 1"], ["id", 1], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (1.9ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mHospital Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "hospitals" WHERE LOWER("hospitals"."name") = LOWER(?) LIMIT ?[0m  [["name", "this is bot hospital- 2"], ["LIMIT", 1]]
+  [1m[36mHospital Create (0.3ms)[0m  [1m[32mINSERT INTO "hospitals" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "this is bot hospital- 2"], ["created_at", "2022-04-26 10:35:10.406250"], ["updated_at", "2022-04-26 10:35:10.406250"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mHospital Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "hospitals" WHERE LOWER("hospitals"."name") = LOWER(?) AND "hospitals"."id" != ? LIMIT ?[0m  [["name", ""], ["id", 1], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mHospital Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "hospitals" WHERE LOWER("hospitals"."name") = LOWER(?) LIMIT ?[0m  [["name", "this is bot hospital- 3"], ["LIMIT", 1]]
+  [1m[36mHospital Create (0.2ms)[0m  [1m[32mINSERT INTO "hospitals" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "this is bot hospital- 3"], ["created_at", "2022-04-26 10:35:10.411173"], ["updated_at", "2022-04-26 10:35:10.411173"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mHospital Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "hospitals" WHERE LOWER("hospitals"."name") = LOWER(?) AND "hospitals"."id" != ? LIMIT ?[0m  [["name", "1234567"], ["id", 1], ["LIMIT", 1]]
+  [1m[36mHospital Update (0.1ms)[0m  [1m[33mUPDATE "hospitals" SET "name" = ?, "updated_at" = ? WHERE "hospitals"."id" = ?[0m  [["name", "1234567"], ["updated_at", "2022-04-26 10:35:10.412505"], ["id", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mHospital Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "hospitals" WHERE LOWER("hospitals"."name") = LOWER(?) LIMIT ?[0m  [["name", "this is bot hospital- 1"], ["LIMIT", 1]]
+  [1m[36mHospital Create (0.4ms)[0m  [1m[32mINSERT INTO "hospitals" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "this is bot hospital- 1"], ["created_at", "2022-04-26 10:36:28.410629"], ["updated_at", "2022-04-26 10:36:28.410629"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mHospital Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "hospitals" WHERE LOWER("hospitals"."name") = LOWER(?) AND "hospitals"."id" != ? LIMIT ?[0m  [["name", "this is bot hospital- 1"], ["id", 1], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (2.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mHospital Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "hospitals" WHERE LOWER("hospitals"."name") = LOWER(?) LIMIT ?[0m  [["name", "this is bot hospital- 2"], ["LIMIT", 1]]
+  [1m[36mHospital Create (0.4ms)[0m  [1m[32mINSERT INTO "hospitals" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "this is bot hospital- 2"], ["created_at", "2022-04-26 10:36:28.428492"], ["updated_at", "2022-04-26 10:36:28.428492"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mHospital Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "hospitals" WHERE LOWER("hospitals"."name") = LOWER(?) AND "hospitals"."id" != ? LIMIT ?[0m  [["name", ""], ["id", 1], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mHospital Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "hospitals" WHERE LOWER("hospitals"."name") = LOWER(?) LIMIT ?[0m  [["name", "this is bot hospital- 3"], ["LIMIT", 1]]
+  [1m[36mHospital Create (0.3ms)[0m  [1m[32mINSERT INTO "hospitals" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "this is bot hospital- 3"], ["created_at", "2022-04-26 10:36:28.432995"], ["updated_at", "2022-04-26 10:36:28.432995"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mHospital Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "hospitals" WHERE LOWER("hospitals"."name") = LOWER(?) AND "hospitals"."id" != ? LIMIT ?[0m  [["name", "1234567"], ["id", 1], ["LIMIT", 1]]
+  [1m[36mHospital Update (0.1ms)[0m  [1m[33mUPDATE "hospitals" SET "name" = ?, "updated_at" = ? WHERE "hospitals"."id" = ?[0m  [["name", "1234567"], ["updated_at", "2022-04-26 10:36:28.434531"], ["id", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mHospital Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "hospitals" WHERE LOWER("hospitals"."name") = LOWER(?) LIMIT ?[0m  [["name", "this is bot hospital- 1"], ["LIMIT", 1]]
+  [1m[36mHospital Create (0.4ms)[0m  [1m[32mINSERT INTO "hospitals" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "this is bot hospital- 1"], ["created_at", "2022-04-26 10:37:25.249951"], ["updated_at", "2022-04-26 10:37:25.249951"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mHospital Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "hospitals" WHERE LOWER("hospitals"."name") = LOWER(?) AND "hospitals"."id" != ? LIMIT ?[0m  [["name", "this is bot hospital- 1"], ["id", 1], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (2.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mHospital Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "hospitals" WHERE LOWER("hospitals"."name") = LOWER(?) LIMIT ?[0m  [["name", "this is bot hospital- 2"], ["LIMIT", 1]]
+  [1m[36mHospital Create (0.4ms)[0m  [1m[32mINSERT INTO "hospitals" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "this is bot hospital- 2"], ["created_at", "2022-04-26 10:37:25.266957"], ["updated_at", "2022-04-26 10:37:25.266957"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mHospital Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "hospitals" WHERE LOWER("hospitals"."name") = LOWER(?) AND "hospitals"."id" != ? LIMIT ?[0m  [["name", ""], ["id", 1], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mHospital Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "hospitals" WHERE LOWER("hospitals"."name") = LOWER(?) LIMIT ?[0m  [["name", "this is bot hospital- 3"], ["LIMIT", 1]]
+  [1m[36mHospital Create (0.3ms)[0m  [1m[32mINSERT INTO "hospitals" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "this is bot hospital- 3"], ["created_at", "2022-04-26 10:37:25.271906"], ["updated_at", "2022-04-26 10:37:25.271906"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mHospital Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "hospitals" WHERE LOWER("hospitals"."name") = LOWER(?) AND "hospitals"."id" != ? LIMIT ?[0m  [["name", "1234567"], ["id", 1], ["LIMIT", 1]]
+  [1m[36mHospital Update (0.1ms)[0m  [1m[33mUPDATE "hospitals" SET "name" = ?, "updated_at" = ? WHERE "hospitals"."id" = ?[0m  [["name", "1234567"], ["updated_at", "2022-04-26 10:37:25.273578"], ["id", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mHospital Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "hospitals" WHERE LOWER("hospitals"."name") = LOWER(?) LIMIT ?[0m  [["name", "this is bot hospital- 4"], ["LIMIT", 1]]
+  [1m[36mHospital Create (0.2ms)[0m  [1m[32mINSERT INTO "hospitals" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "this is bot hospital- 4"], ["created_at", "2022-04-26 10:37:25.276301"], ["updated_at", "2022-04-26 10:37:25.276301"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mHospital Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "hospitals" WHERE LOWER("hospitals"."name") = LOWER(?) LIMIT ?[0m  [["name", "this is bot hospital- 5"], ["LIMIT", 1]]
+  [1m[36mHospital Create (0.1ms)[0m  [1m[32mINSERT INTO "hospitals" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "this is bot hospital- 5"], ["created_at", "2022-04-26 10:37:25.277757"], ["updated_at", "2022-04-26 10:37:25.277757"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mHospital Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "hospitals" WHERE LOWER("hospitals"."name") = LOWER(?) AND "hospitals"."id" != ? LIMIT ?[0m  [["name", "this is bot hospital- 5"], ["id", 1], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mHospital Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "hospitals" WHERE LOWER("hospitals"."name") = LOWER(?) LIMIT ?[0m  [["name", "this is bot hospital- 1"], ["LIMIT", 1]]
+  [1m[36mHospital Create (0.4ms)[0m  [1m[32mINSERT INTO "hospitals" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "this is bot hospital- 1"], ["created_at", "2022-04-26 10:37:42.386066"], ["updated_at", "2022-04-26 10:37:42.386066"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mHospital Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "hospitals" WHERE LOWER("hospitals"."name") = LOWER(?) AND "hospitals"."id" != ? LIMIT ?[0m  [["name", "this is bot hospital- 1"], ["id", 1], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (2.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mHospital Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "hospitals" WHERE LOWER("hospitals"."name") = LOWER(?) LIMIT ?[0m  [["name", "this is bot hospital- 2"], ["LIMIT", 1]]
+  [1m[36mHospital Create (0.4ms)[0m  [1m[32mINSERT INTO "hospitals" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "this is bot hospital- 2"], ["created_at", "2022-04-26 10:37:42.403854"], ["updated_at", "2022-04-26 10:37:42.403854"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mHospital Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "hospitals" WHERE LOWER("hospitals"."name") = LOWER(?) AND "hospitals"."id" != ? LIMIT ?[0m  [["name", ""], ["id", 1], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mHospital Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "hospitals" WHERE LOWER("hospitals"."name") = LOWER(?) LIMIT ?[0m  [["name", "this is bot hospital- 3"], ["LIMIT", 1]]
+  [1m[36mHospital Create (0.3ms)[0m  [1m[32mINSERT INTO "hospitals" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "this is bot hospital- 3"], ["created_at", "2022-04-26 10:37:42.409643"], ["updated_at", "2022-04-26 10:37:42.409643"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mHospital Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "hospitals" WHERE LOWER("hospitals"."name") = LOWER(?) AND "hospitals"."id" != ? LIMIT ?[0m  [["name", "1234567"], ["id", 1], ["LIMIT", 1]]
+  [1m[36mHospital Update (0.1ms)[0m  [1m[33mUPDATE "hospitals" SET "name" = ?, "updated_at" = ? WHERE "hospitals"."id" = ?[0m  [["name", "1234567"], ["updated_at", "2022-04-26 10:37:42.411231"], ["id", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mHospital Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "hospitals" WHERE LOWER("hospitals"."name") = LOWER(?) LIMIT ?[0m  [["name", "this is bot hospital- 4"], ["LIMIT", 1]]
+  [1m[36mHospital Create (0.2ms)[0m  [1m[32mINSERT INTO "hospitals" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "this is bot hospital- 4"], ["created_at", "2022-04-26 10:37:42.413549"], ["updated_at", "2022-04-26 10:37:42.413549"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mHospital Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "hospitals" WHERE LOWER("hospitals"."name") = LOWER(?) LIMIT ?[0m  [["name", "this is bot hospital- 5"], ["LIMIT", 1]]
+  [1m[36mHospital Create (0.1ms)[0m  [1m[32mINSERT INTO "hospitals" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "this is bot hospital- 5"], ["created_at", "2022-04-26 10:37:42.415086"], ["updated_at", "2022-04-26 10:37:42.415086"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mHospital Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "hospitals" WHERE LOWER("hospitals"."name") = LOWER(?) AND "hospitals"."id" != ? LIMIT ?[0m  [["name", "this is bot hospital- 5"], ["id", 1], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mHospital Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "hospitals" WHERE LOWER("hospitals"."name") = LOWER(?) LIMIT ?[0m  [["name", "this is bot hospital- 1"], ["LIMIT", 1]]
+  [1m[36mHospital Create (0.4ms)[0m  [1m[32mINSERT INTO "hospitals" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "this is bot hospital- 1"], ["created_at", "2022-04-26 10:37:57.710674"], ["updated_at", "2022-04-26 10:37:57.710674"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mHospital Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "hospitals" WHERE LOWER("hospitals"."name") = LOWER(?) AND "hospitals"."id" != ? LIMIT ?[0m  [["name", "this is bot hospital- 1"], ["id", 1], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (2.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mHospital Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "hospitals" WHERE LOWER("hospitals"."name") = LOWER(?) LIMIT ?[0m  [["name", "this is bot hospital- 2"], ["LIMIT", 1]]
+  [1m[36mHospital Create (0.4ms)[0m  [1m[32mINSERT INTO "hospitals" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "this is bot hospital- 2"], ["created_at", "2022-04-26 10:37:57.728141"], ["updated_at", "2022-04-26 10:37:57.728141"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mHospital Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "hospitals" WHERE LOWER("hospitals"."name") = LOWER(?) AND "hospitals"."id" != ? LIMIT ?[0m  [["name", ""], ["id", 1], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mHospital Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "hospitals" WHERE LOWER("hospitals"."name") = LOWER(?) LIMIT ?[0m  [["name", "this is bot hospital- 3"], ["LIMIT", 1]]
+  [1m[36mHospital Create (0.3ms)[0m  [1m[32mINSERT INTO "hospitals" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "this is bot hospital- 3"], ["created_at", "2022-04-26 10:37:57.733063"], ["updated_at", "2022-04-26 10:37:57.733063"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mHospital Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "hospitals" WHERE LOWER("hospitals"."name") = LOWER(?) AND "hospitals"."id" != ? LIMIT ?[0m  [["name", "1234567"], ["id", 1], ["LIMIT", 1]]
+  [1m[36mHospital Update (0.1ms)[0m  [1m[33mUPDATE "hospitals" SET "name" = ?, "updated_at" = ? WHERE "hospitals"."id" = ?[0m  [["name", "1234567"], ["updated_at", "2022-04-26 10:37:57.734785"], ["id", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mHospital Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "hospitals" WHERE LOWER("hospitals"."name") = LOWER(?) LIMIT ?[0m  [["name", "this is bot hospital- 4"], ["LIMIT", 1]]
+  [1m[36mHospital Create (0.2ms)[0m  [1m[32mINSERT INTO "hospitals" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "this is bot hospital- 4"], ["created_at", "2022-04-26 10:37:57.737435"], ["updated_at", "2022-04-26 10:37:57.737435"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mHospital Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "hospitals" WHERE LOWER("hospitals"."name") = LOWER(?) LIMIT ?[0m  [["name", "this is bot hospital- 5"], ["LIMIT", 1]]
+  [1m[36mHospital Create (0.1ms)[0m  [1m[32mINSERT INTO "hospitals" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "this is bot hospital- 5"], ["created_at", "2022-04-26 10:37:57.738882"], ["updated_at", "2022-04-26 10:37:57.738882"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mHospital Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "hospitals" WHERE LOWER("hospitals"."name") = LOWER(?) AND "hospitals"."id" != ? LIMIT ?[0m  [["name", "this is bot hospital- 5"], ["id", 1], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[31mrollback transaction[0m
